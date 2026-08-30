@@ -11,7 +11,7 @@
 **钉钉自动考勤助手**
 
 
-[![Auto.js Pro](https://img.shields.io/badge/node24.14.0-blue)]
+[node](https://img.shields.io/badge/node24.14.0-blue)
 [![License](https://img.shields.io/badge/License-ISC-yellow)](./liense)
 
 > 我也想出去看看！
