@@ -1,0 +1,20 @@
+{
+  "name": "mlzs-server",
+  "version": "1.0.0",
+  "description": "Mlzs 单 Node 服务（设备 Socket.io + 认证/设备/用户/日志 HTTP 接口 + 前端托管）",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --trace-deprecation index.js",
+    "dev": "node --trace-deprecation index.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "chinese-days": "*",
+    "cors": "^2.8.5",
+    "dotenv": "^17.4.2",
+    "express": "^5.1.0",
+    "mysql2": "^3.15.3",
+    "socket.io": "^4.8.1",
+    "ws": "^8.18.3"
+  }
+}

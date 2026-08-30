@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>设备监控系统 - 登录</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!--<link href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">-->
+  <link href="./css/font-awesome.min.css" rel="stylesheet">
+  
+  <script src="./js/tailwind-config.js"></script>
+  
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .form-focus {
+        @apply focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 min-h-screen flex items-center justify-center p-4">
+  <div class="w-full max-w-md">
+    <div class="bg-white rounded-xl p-8 shadow-lg">
+      <div class="text-center mb-6">
+        <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+          <i class="fa fa-cogs text-primary text-2xl"></i>
+        </div>
+        <h1 class="text-xl font-bold text-gray-800">设备监控系统</h1>
+        <p class="text-gray-500 text-sm mt-1">请登录或注册账号</p>
+      </div>
+
+      <!-- 登录表单 -->
+      <div id="loginForm">
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm mb-2" for="loginUser">
+            用户名
+          </label>
+          <div class="relative">
+            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+              <i class="fa fa-user"></i>
+            </span>
+            <input 
+              type="text" 
+              id="loginUser" 
+              class="w-full pl-10 py-2.5 border border-gray-200 rounded-lg form-focus"
+              placeholder="请输入用户名"
+            >
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <label class="block text-gray-700 text-sm mb-2" for="loginPwd">
+            密码
+          </label>
+          <div class="relative">
+            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+              <i class="fa fa-lock"></i>
+            </span>
+            <input 
+              type="password" 
+              id="loginPwd" 
+              class="w-full pl-10 py-2.5 border border-gray-200 rounded-lg form-focus"
+              placeholder="请输入密码"
+            >
+          </div>
+        </div>
+
+        <button 
+          onclick="handleLogin()" 
+          class="w-full bg-primary hover:bg-primary/90 text-white py-2.5 rounded-lg transition-colors font-medium"
+          id="loginBtn"
+        >
+          登录
+        </button>
+
+        <div class="text-center text-gray-600 text-sm mt-4">
+          还没有账号？ 
+          <a href="javascript:switchToRegister()" class="text-primary hover:underline ml-1">
+            立即注册
+          </a>
+        </div>
+      </div>
+
+      <!-- 注册表单 -->
+      <div id="registerForm" class="hidden">
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm mb-2" for="regUser">
+            用户名
+          </label>
+          <div class="relative">
+            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+              <i class="fa fa-user"></i>
+            </span>
+            <input 
+              type="text" 
+              id="regUser" 
+              class="w-full pl-10 py-2.5 border border-gray-200 rounded-lg form-focus"
+              placeholder="设置登录用户名"
+            >
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm mb-2" for="regPwd">
+            密码
+          </label>
+          <div class="relative">
+            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+              <i class="fa fa-lock"></i>
+            </span>
+            <input 
+              type="password" 
+              id="regPwd" 
+              class="w-full pl-10 py-2.5 border border-gray-200 rounded-lg form-focus"
+              placeholder="设置密码（至少6位）"
+            >
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <label class="block text-gray-700 text-sm mb-2" for="regName">
+            真实姓名 <span class="text-red-500 text-xs">(必须与设备使用人一致)</span>
+          </label>
+          <div class="relative">
+            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+              <i class="fa fa-id-card"></i>
+            </span>
+            <input 
+              type="text" 
+              id="regName" 
+              class="w-full pl-10 py-2.5 border border-gray-200 rounded-lg form-focus"
+              placeholder="请输入真实姓名"
+            >
+          </div>
+        </div>
+
+        <button 
+          onclick="handleRegister()" 
+          class="w-full bg-primary hover:bg-primary/90 text-white py-2.5 rounded-lg transition-colors font-medium"
+          id="regBtn"
+        >
+          注册
+        </button>
+
+        <div class="text-center text-gray-600 text-sm mt-4">
+          已有账号？ 
+          <a href="javascript:switchToLogin()" class="text-primary hover:underline ml-1">
+            立即登录
+          </a>
+        </div>
+      </div>
+
+      <!-- 消息提示 -->
+      <div id="msg" class="mt-4 p-3 rounded-lg text-sm hidden"></div>
+    </div>
+  </div>
+
+  <script src="./js/login.js"></script>
+</body>
+</html>
