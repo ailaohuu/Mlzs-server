@@ -1,0 +1,19 @@
+# ==========================
+# 数据库配置
+# ==========================
+DB_HOST=localhost
+DB_USER=sqldata
+DB_PASSWORD=sqlpasswd
+DB_NAME=sqldata
+DB_PORT=3306
+DB_CONNECTION_LIMIT=30
+
+# ==========================
+# 服务配置
+# ==========================
+PORT=7011
+
+# CORS 允许的来源，逗号分隔。前端由本服务同源托管，一般保持默认即可。
+CORS_ORIGINS=http://localhost:7011,http://127.0.0.1:7011
+
+TOKEN_SECRET=wawddysys2026
